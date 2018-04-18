@@ -1,0 +1,37 @@
+
+<div class="navbar">
+    <a href="#!/books" class="btn btn-primary"> VỀ TRANG CHỦ</a>
+
+</div>
+</br>
+<div class="panel panel-default" ng-init="getBook()">
+  <div class="panel-heading">
+    <h3 class="panel-title" class="alert alert-primary">{{book.title}}</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+    	<div class="col-md-4">
+            <img src="{{book.image_url}}">
+        </div>
+        <div class="col-md-8">
+            <p>{{book.description}}</p>
+            <ul class="list-group">
+                <li class="list-group-item">Thể Loại: {{book.genre}}</li>
+                <li class="list-group-item">Tác giả: {{book.author}}</li>
+                <li class="list-group-item">Người Đăng: {{book.publisher}}</li>
+                <li class="list-group-item">Số Trang: {{book.pages}}</li>
+
+                
+            </ul>
+            <a target="_blank" href="{{book.buy_url}}" class="btn btn-primary"> Buy on Amazon</a>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="pull-right">
+    <a href="#!/books/edit/{{book._id}}" class="btn btn-primary" >EDIT</a> | <a  ng-click="removeBook(book._id)"" class="btn btn-primary">DELETE</a>
+    
+</div>
